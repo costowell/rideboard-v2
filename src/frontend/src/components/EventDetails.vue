@@ -12,7 +12,7 @@ import EditCarButton from './EditCarButton.vue';
       <div>
         <h3 class="card-title">{{ event?.name }}</h3>
         <h5 class="card-text">
-          <a v-bind:href="'https://maps.google.com/?q=' + event?.location"
+          <a target="_blank" v-bind:href="'https://maps.google.com/?q=' + event?.location"
             ><IconPin /> {{ event?.location }}</a
           >
         </h5>
