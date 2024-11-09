@@ -6,7 +6,7 @@ import LeaveCarButton from './LeaveCarButton.vue';
 <template>
   <div class="m-1">
     <h5>Driver Comment:</h5>
-    <p v-if="car!.comment.length != 0">{{ car!.comment }}</p>
+    <p class="car-comment" v-if="car!.comment.length != 0">{{ car!.comment }}</p>
     <p v-else><i>No Comment Provided</i></p>
     <h5>Passengers:</h5>
     <ul class="no-bullets" v-if="car!.riders.length != 0">
@@ -60,5 +60,8 @@ ul.no-bullets {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
+}
+.car-comment {
+  white-space: normal;
 }
 </style>
